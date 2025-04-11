@@ -11,17 +11,32 @@ import { TiThMenuOutline } from "react-icons/ti";
 const Header = () => {
   // destructure header data
   const { logo } = headerData;
-  // header state 
-  const [isActive, setIsActive] = useState(false)
+  // header state
+  const [isActive, setIsActive] = useState(false);
   // nav mobile state
-  const [navMobile, setNavMobile] = useState(false)
+  const [navMobile, setNavMobile] = useState(false);
   // scroll event
-  useEffect(()=>{
-    window.addEventListener("scroll", ()=>{
-      window.scrollY > 50 ? setIsActive(true) : setIsActive(false)
-    })
-  })
-  return <header className={`${isActive ? "bg-red-500" : "bg-green-500"} fixed left-0 right-0 top-0 z-10`}>Header</header>;
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 50 ? setIsActive(true) : setIsActive(false);
+    });
+  });
+  return (
+    <header
+      className={`${
+        isActive
+          ? "bg-red-500 h-[100px] lg:h-[110px] shadow-lg "
+          : "bg-green-500 h-[120px] lg-h-[150px]"
+      } fixed left-0 right-0 top-0 z-10 max-w-[1920px] w-full mx-auto transition-all duration-300`}
+    >
+      <div>
+        {/* logo */}
+        <a href="">
+          <img src={logo} alt="" />
+        </a>
+      </div>
+    </header>
+  );
 };
 
 export default Header;
