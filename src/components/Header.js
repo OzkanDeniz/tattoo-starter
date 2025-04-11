@@ -25,15 +25,27 @@ const Header = () => {
     <header
       className={`${
         isActive
-          ? "bg-red-500 h-[100px] lg:h-[110px] shadow-lg "
-          : "bg-green-500 h-[120px] lg-h-[150px]"
+          ? " h-[100px] lg:h-[110px] shadow-lg "
+          : " h-[120px] lg-h-[150px]"
       } fixed left-0 right-0 top-0 z-10 max-w-[1920px] w-full mx-auto transition-all duration-300`}
     >
-      <div>
+      <div className="flex justify-between items-center h-full pl-[50px] pr-[60px]">
         {/* logo */}
         <a href="">
-          <img src={logo} alt="" />
+          <img  className="w-[188px] h-[90px]" src={logo} alt="" />
         </a>
+        {/* nav - initially hidden - show on desktop */}
+        <div className="hidden xl:flex">
+          <Nav/>
+        </div>
+        {/* nav menu btn - showing by default - hidden on desktop mode */}
+        <div className="xl:hidden absolute right-[5%] bg-dark text-white p-2 rounded-md cursor-pointer"> 
+          <TiThMenuOutline className="text-3xl"/>
+        </div>
+        {/* nav mobile - showing by default - hidden on desktop mode */}
+        <div>
+           <NavMobile/>
+        </div>
       </div>
     </header>
   );
