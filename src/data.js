@@ -45,7 +45,7 @@ export const socialData = [
 ];
 
 export const heroData = {
-  title: 'I’m Void Sir.',
+  title: 'I’m Tolga Yilmaz.',
   subtitle:
     'Tattoos have their own unique power and magic. They not only beautify the body but also the psyche.',
   btnText: 'read more',
