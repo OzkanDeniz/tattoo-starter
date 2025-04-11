@@ -5,13 +5,16 @@ const NavMobile = () => {
   const { items } = navData;
   return (
     <nav className="w-full h-full flex flex-col bg-green-500 justify-evenly overflow-hidden">
-      <ul>
+      <ul className="flex flex-col justify-center items-center gap-y-6 py-6 mb-8">
         {items.map((item, index) => (
           <li key={index}>
-            <a href={item.href}>{item.name}</a>
+            <a className="text-2xl font-primary" href={item.href}>{item.name}</a>
           </li>
         ))}
       </ul>
+      <div>
+        <Socials/>
+      </div>
     </nav>
   );
 };
