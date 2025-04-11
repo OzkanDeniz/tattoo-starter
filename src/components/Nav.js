@@ -4,10 +4,10 @@ import {navData} from "../data"
 const Nav = () => {
   const {items} = navData
   return <nav>
-    <ul>
+    <ul className="flex gap-x-[58px]">
       {items.map((item,index)=>(
         <li key={index}>
-          <a href={item.href}>{item.name}</a>
+          <a className="link" href={item.href}>{item.name}</a>
         </li>
       ))}
     </ul>
