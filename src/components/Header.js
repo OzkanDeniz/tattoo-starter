@@ -43,7 +43,7 @@ const Header = () => {
           <TiThMenuOutline className="text-3xl"/>
         </div>
         {/* nav mobile - showing by default - hidden on desktop mode */}
-        <div>
+        <div className="fixed bg-red-500 w-full h-full left-0 -z-10 transition-all duration-300">
            <NavMobile/>
         </div>
       </div>
